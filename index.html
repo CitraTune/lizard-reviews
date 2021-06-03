@@ -1,0 +1,349 @@
+<html>
+  <head> 
+    <style> 
+      * {
+  background-color: rgb(207, 226, 243);
+}
+* {
+  font-size: 100px;
+
+}
+      
+#main-header {
+  font-family: sans-serif;
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  background-color: transparent;
+  font-size: 44%;
+  text-align: center;
+  top: 10px;
+
+}
+
+#lizard-name {
+  font-family: sans-serif;
+  font-size: 61%;
+  background-color: transparent;
+  text-align: center;
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  left: 0px;
+
+}
+#first-page {
+  font-family: sans-serif;
+  background-color: transparent;
+  font-size: 44%;
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  
+
+}
+#lizard-review {
+  font-family: sans-serif;
+  font-size: 44%;
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  top: 165px;
+
+  
+}
+#lizard-pic {
+  position: absolute;
+  text-align: center;
+  background-color: transparent;
+  width: 99%;
+  height: 275px;
+  visibility: hidden;
+  bottom: 10px;
+ 
+
+}
+
+
+
+#left-arrow {
+  position: absolute;
+  text-align: center;
+background-color: transparent;
+  top: 260px;
+  width: 200px;
+  height:150px;
+  left: 0%;
+  
+}
+#less-lizards {
+  position: absolute;
+  text-align: center;
+background-color: transparent;
+  font-size: 40%;
+  font-color: black;
+  top: 160px;
+  width: 200px;
+  left: 0%;
+}
+
+#right-arrow {
+  position: absolute;
+  text-align: center;
+background-color: transparent;
+  top: 260px;
+  width: 200px;
+  right: 0%;
+}
+#cactus {
+  position: absolute;
+  text-align: center;
+  background-color: transparent;
+  top: 20px;
+  width: 150px;
+  right: 5%;
+  visibility: hidden;
+}
+#passblock {
+  position: absolute;
+  text-align: center;
+  background-color: transparent;
+  top: 400px;
+  width: 50px;
+  left: 20%;
+  visibility: hidden;
+}
+      .inputs {
+        font-size: 20%;
+        visibility: hidden;
+        background-color: transparent;
+      }
+      .inputs2 {
+        font-size: 70%;
+        font-family: cursive;
+        visibility: hidden;
+        background-color: transparent;
+        
+      }
+#more-lizards {
+  position: absolute;
+  text-align: center;
+background-color: transparent;
+  font-size: 40%;
+  top: 160px;
+  width: 200px;
+  right: 0%;
+
+}
+#more-lizards:hover {
+  background-color:blue;
+}
+#arrow-right:hover {
+  background-color:blue;
+}
+#less-lizards:hover {
+  background-color:blue;
+}
+#arrow-left:hover {
+  background-color:blue;
+}
+      #bottom-page {
+        font-size: 30%;
+        background-color: transparent;
+      }
+      #test-pagebottom {
+        font-size: 30%;
+        background-color: transparent;
+      }
+      
+      #page-number{
+        position: relative;
+        font-size: 20%; 
+        text-align: center;
+        bottom: 150px;
+        background-color: transparent;
+        font-family: monospace;
+        z-index: 10000000;
+      }
+    </style>
+    <h1 id="main-header"> Awesome Lizard Reviews </h1>
+<p id="lizard-name">
+
+</p>
+<p id = "first-page">
+  Hi!<br>Welcome to my lizard reviewing page.<br><br>I review lizards, and stuff.<br><br>
+  There's also some cool things that aren't lizards,<br>but you'll have to look a bit harder to find those.<br>
+  Anyways, I hope you enjoy what you see.<br>Click an arrow to get started!
+    </p> 
+   
+    
+
+<p id="lizard-review">
+  <br>
+</p>
+<img id ="left-arrow" src="https://toppng.com/uploads/preview/left-red-arrow-transparent-background-115501332904qux4qivcu.png" alt = "red arrow left">
+<p id = "less-lizards">do not view lizards </p>
+<p id= "more-lizards"> view lizards </p>
+<img id= "right-arrow" src= "https://www.vhv.rs/dpng/d/215-2150906_arrow-clipart-red-red-right-arrow-png-transparent.png" alt = "red arrow right">
+<img id= "cactus" src= "https://i.ytimg.com/vi/r9RL9ISACTs/maxresdefault.jpg" alt = "cactus">
+<img id= "passblock" src= "https://www.freeiconspng.com/thumbs/lock-icon/lock-icon-11.png" alt = "passblock">
+<p id = "page-number">page 1</p>  
+<img id = "lizard-pic" alt = "stop press lizard button">
+
+    
+  
+    
+    
+    <script>
+      var arrowClicks = 0;
+      var ontaim = 0;
+      var nameArray = ["this is not a lizard", "alligator lizard", "coastal fence lizard", "side blotched lizard", "armadillo lizard","leopard gecko","crested gecko","lizard hat","salamander", "frog", "tohru"
+      ]
+      var imgArray = ["https://www.pngarts.com/files/1/Snake-PNG-Download-Image.png",
+                      
+ "https://www.burkemuseum.org/sites/default/files/images/biology/herpetology/washington/northern-alligator-lizard1-1100x555.jpg", 
+                      
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO8px5H5-sp-obERzz3i2mBabNJS3uN8doyLPhNrk9XlwduWNxtSiv6oD4P_pZGwekWutV4LBMRT030vxT:www.californiaherps.com/lizards/images/sobocourtiisb508.jpg",
+
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDmmiQM39BE8-yauAQGou6b6zM4qvjfRXT8RoGt8Cwl4kfQHdq:nathistoc.bio.uci.edu/Reptiles/Side-blotched%2520Lizard,%2520Uta%2520stansburiana,orange%2520morph%2520adult%2520male%2520(Borreg,%25203-08).jpg",
+                     
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfD6-P1NmTPTdXXaC5GGXXksLkXJs7CbROPuzt1ifh9YEJeE:https://allthatsinteresting.com/wordpress/wp-content/uploads/2019/04/armadillo-lizard-biting-its-tail.jpg",
+                      
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq4PDCfOk50yiXm8XDkqRkaY5IkF0mQEUtROavlQ7reSybG0OA2ACFBk0yQz-FanFSaPzifkioE_BIun9M3g:https://www.reptilecentre.com/blog/wp-content/uploads/2020/01/leopard-gecko.jpg",
+                      
+"https://cdn.shopify.com/s/files/1/2259/5719/articles/gecko-165029_1280_1_1024x.jpg?v=1557783330",
+                      
+"https://www.beardeddragon.co/image/cache/data/bandanahat-600x600.jpg",                   
+                         
+"https://dickinsoncountyconservationboard.com/wp-content/uploads/sites/2/2018/08/TigerSalamander_001_20140319.jpg",
+                         
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXYxi7o7IfhydzpNMSJUh2Rs5rropBVS8ed-keeSvD2cRvg3U:https://brevardzoo.org/wp-content/uploads/green-tree-frog-1.jpg",
+                        
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZPncuKU0Txl4_3vLUjFN-OLJ5Q-EFPhwc8VLJSIrmGR5HUJu4Rntiy7-ixGqnrcSqkXNwQIPGMNiLaXv:https://besthqwallpapers.com/Uploads/2-7-2018/57901/thumb2-tohru-manga-miss-kobayashis-dragon-maid-protagonist-kobayashi-san-chi-no-maid-dragon.jpg"
+      
+                     ];
+      var reviewArray = ["this is not a lizard<br>this is not a lizard<br>this is not a lizard",
+        
+"This lizard is pretty cool!<br>He has the pokey scales.<br>Awesomeness Rating: 10/10",
+                         
+"This lizard is super rad!<br>He also has the blue tummy!<br>Awesomeness Rating: 10/10",
+        
+"This lizard is a cool dude!<br>He got the side blotches! :O<br>Awesomeness Rating 10/10",
+                         
+"This lizard got awesome sauce!<br> He got the curly scales!<br>Awesomeness Rating 10/10",
+                                               
+"pog lizard<br>pog lizard<br>Awesomeness Rating 11/10",
+                         
+"The lizard got wild eyeball!<br>he looks kinda funky<br>Awesomeness Rating 11/10",
+                         
+"this is not a lizard<br>big iron on hip when?<br>awesomeness rating: infinity",
+                         
+"he looks very happy<br>(not a real lizard)<br>awesome? heck yea!",
+                         
+"awesome frog<br>credit to alex for being the best emotional support!<br>alex cuteness rating: 10/10",
+                        
+"kalan probably wanted this<br>credit to kalan for learning code with me<br>kalan loserness rating: 10/10"
+      
+      ];
+      
+      var mainHeader = document.getElementById("main-header");
+      var passblock = document.getElementById("passblock");
+      var lizardPic = document.getElementById("lizard-pic");
+      var lessLizards = document.getElementById("less-lizards");
+      var moreLizards = document.getElementById("more-lizards");
+      var lizardReview = document.getElementById("lizard-review");
+      var lizardName = document.getElementById("lizard-name");
+      var cactus = document.getElementById("cactus");
+      var firstPage = document.getElementById("first-page");
+      var pageCount = document.getElementById("page-number");
+      var rightArrow = document.getElementById("right-arrow");
+      var leftArrow = document.getElementById("left-arrow");      
+
+     
+      
+      var onRightClick = function(){
+         arrowClicks += 1;
+         ontaim += 1;
+         lizardPic.style.visibility = "visible";
+        
+         pageCount.innerHTML = arrowClicks;
+         lizardName.innerHTML = nameArray[arrowClicks];
+        
+         lizardReview.innerHTML = reviewArray[arrowClicks];
+         
+         lizardPic.src = imgArray[arrowClicks];
+         
+         
+         
+          /*  imgArray.push(imageInput);
+            nameArray.push(nameInput);            
+            reviewArray.push(reviewInput);
+        */
+         
+        
+         if(ontaim = 1){
+         
+         firstPage.parentNode.removeChild(firstPage);}
+     }
+    
+      
+      
+       var onleftClick = function(){
+         arrowClicks -= 1;
+         ontaim += 1;
+         
+         pageCount.innerHTML = arrowClicks;
+
+         lizardName.innerHTML = nameArray[arrowClicks];
+        
+         lizardReview.innerHTML = reviewArray[arrowClicks];
+         
+         lizardPic.src = imgArray[arrowClicks];
+         
+         
+         lizardPic.style.visibility = "visible";
+          /*  imgArray.push(imageInput);
+            nameArray.push(nameInput);            
+            reviewArray.push(reviewInput);
+            
+             
+   
+    <p class = "inputs" id = name-inputline>Lizard Name: <input type="text" id="name-input" class = "inputs2"></p>
+    <p class = "inputs" id = description-inputline>Lizard Description: <input type="text" id="description-input" class = "inputs2"></p>
+    <p class = "inputs" id = image-inputline>Lizard Image URL<br>(right click copy image address to get this): <input type="text" id="image-input" class = "inputs2"></p>
+        */
+        
+        
+        
+         if(ontaim = 1){
+        
+         firstPage.parentNode.removeChild(firstPage);}}    
+              
+       
+       var onPassblockClick = function(){}
+       var onCactusClick = function(){}
+       rightArrow.addEventListener("click", onRightClick);
+       leftArrow.addEventListener("click", onleftClick);
+       cactus.addEventListener("click", onCactusClick);
+       passblock.addEventListener("click",onPassblockClick)
+       
+        /*
+        ADD LIZARD SOCIETY AND PASSCODE 
+        
+        ADD USER INPUT
+        
+        ADD COOKIE CLICKER
+        
+        CREATE YOUTUBE VIDEOS ON REVIEWS
+        
+        DO DAILY REVIEW UPDATES*/
+          
+    
+    </script>
+    </head>
+  
+</html>
