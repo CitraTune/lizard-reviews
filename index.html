@@ -61,9 +61,9 @@
   text-align: center;
   background-color: transparent;
   width: 99%;
-  height: 275px;
+  height: 250px;
   visibility: hidden;
-  bottom: 10px;
+  bottom: 30px;
  
 
 }
@@ -106,6 +106,7 @@ background-color: transparent;
   top: 20px;
   width: 150px;
   right: 5%;
+  opacity: 0.3;
   visibility: hidden;
 }
 #passblock {
@@ -115,7 +116,9 @@ background-color: transparent;
   top: 400px;
   width: 50px;
   left: 20%;
+  opacity: 1;
   visibility: hidden;
+  z-index: 30;
 }
       .inputs {
         font-size: 20%;
@@ -161,21 +164,70 @@ background-color: transparent;
       }
       
       #page-number{
-        position: relative;
+       
+        position: absolute;
+        width: 100%;
         font-size: 20%; 
         text-align: center;
-        bottom: 150px;
+        top:655px;
         background-color: transparent;
         font-family: monospace;
-        z-index: 10000000;
+        z-index: 1000;
       }
+.society-wall {
+    visibility: hidden;
+    
+        
+      }   
+#button1{
+    
+  
+      }   
+#button2{
+    
+  
+      }
+#button3{
+    
+  
+      }      
+#button4{
+    
+  
+      }      
+#button5{
+    
+  
+      }      
+#button6{
+    
+  
+      }    
+#button7{
+    
+  
+      }      
+#button8{
+    
+  
+      }      
+#button9{
+    
+  
+      }      
+#button0{
+    
+  
+      }       
+      
+      
     </style>
     <h1 id="main-header"> Awesome Lizard Reviews </h1>
 <p id="lizard-name">
 
 </p>
 <p id = "first-page">
-  Hi!<br>Welcome to my lizard reviewing page.<br> <br>I review lizards, and stuff.<br> <br>
+  Hi!<br>Welcome to my lizard reviewing page.<br><br>I review lizards, and stuff.<br><br>
   There's also some cool things that aren't lizards,<br>but you'll have to look a bit harder to find those.<br>
   Anyways, I hope you enjoy what you see.<br>Click an arrow to get started!
     </p> 
@@ -191,13 +243,21 @@ background-color: transparent;
 <img id= "right-arrow" src= "https://www.vhv.rs/dpng/d/215-2150906_arrow-clipart-red-red-right-arrow-png-transparent.png" alt = "red arrow right">
 <img id= "cactus" src= "https://i.ytimg.com/vi/r9RL9ISACTs/maxresdefault.jpg" alt = "cactus">
 <img id= "passblock" src= "https://www.freeiconspng.com/thumbs/lock-icon/lock-icon-11.png" alt = "passblock">
-<p id = "page-number">page 1</p>  
+<p id = "page-number">home page</p>  
 <img id = "lizard-pic" alt = "stop press lizard button">
-
-    
-  
-    
-    
+<div id = "lizard-wall" class = "society-wall"></div>    
+<div id = "keypad" class = "society-wall"></div>
+<p id = "society-instructions" class = "society-wall">lizard top secret base- please enter the passcode to continue.</p>    
+<div id = "button1" class = "society-wall"></div>        
+<div id = "button2" class = "society-wall"></div>      
+<div id = "button3" class = "society-wall"></div>          
+<div id = "button4" class = "society-wall"></div>      
+<div id = "button5" class = "society-wall"></div>          
+<div id = "button6" class = "society-wall"></div>          
+<div id = "button7" class = "society-wall"></div>          
+<div id = "button8" class = "society-wall"></div>          
+<div id = "button9" class = "society-wall"></div>          
+<div id = "button0" class = "society-wall"></div>          
     <script>
       var arrowClicks = 0;
       var ontaim = 0;
@@ -262,15 +322,15 @@ background-color: transparent;
       var pageCount = document.getElementById("page-number");
       var rightArrow = document.getElementById("right-arrow");
       var leftArrow = document.getElementById("left-arrow");      
-
-     
+      var societyWall = document.getElementsByClassName("society-wall");
+      
       
       var onRightClick = function(){
          arrowClicks += 1;
          ontaim += 1;
          lizardPic.style.visibility = "visible";
         
-         pageCount.innerHTML = arrowClicks;
+         pageCount.innerHTML = "page " + arrowClicks + "/" + imgArray.length;
          lizardName.innerHTML = nameArray[arrowClicks];
         
          lizardReview.innerHTML = reviewArray[arrowClicks];
@@ -285,11 +345,13 @@ background-color: transparent;
         */
          
         
-         if(ontaim = 1){
+         if(ontaim === 1){
          
          firstPage.parentNode.removeChild(firstPage);}
+         
      }
-    
+       
+      
       
       
        var onleftClick = function(){
@@ -324,8 +386,14 @@ background-color: transparent;
          firstPage.parentNode.removeChild(firstPage);}}    
               
        
-       var onPassblockClick = function(){}
-       var onCactusClick = function(){}
+       var onPassblockClick = function(){
+         
+         
+       }
+       var onCactusClick = function(){
+         societyWall.style.visibility = "visible"
+         
+       }
        rightArrow.addEventListener("click", onRightClick);
        leftArrow.addEventListener("click", onleftClick);
        cactus.addEventListener("click", onCactusClick);
